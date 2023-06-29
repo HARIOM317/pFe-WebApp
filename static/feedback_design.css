@@ -1,0 +1,29 @@
+.outer-look {
+    border: 2px solid skyblue;
+    border-radius: 15px;
+    background-color: #212529;
+    color: white;
+    padding: 20px;
+
+    transition: all 0.5s ease 0s;
+}
+
+.outer-look:hover {
+    box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.7);
+    border: 2.5px solid rgb(0, 183, 255);
+}
+
+.input_design {
+    background-color: #3f474f;
+    color: white;
+}
+
+.input_design:focus {
+    background-color: #3f474f;
+    color: white;
+}
+
+.option-design {
+    background-color: #3f474f;
+    color: white;
+}

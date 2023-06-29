@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Police Force Engagement - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos&family=Noto+Serif:wght@700&family=Philosopher&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="fixed-top bg-new">
+        <!-- top bar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <img src="/static/img/top-img/bhopal-police.png" alt="" height="60px"">
+                <h1 class=" fs-1 g-font1" style="font-weight: bold; color: #efd1a7;">MP Police</h1>
+                <img src="/static/img/top-img/G-20.png" alt="" height="60px">
+            </div>
+        </nav>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="#">
+                    <img src="/static/img/logo/logo.png" alt="pFe" width="50px" class="logo me-3">
+                </a>
+                <!-- <a class="navbar-brand" href="index">pFe</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/views/service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/views/structure">Structure</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Info Zone
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="https://www.mppolice.gov.in/sites/default/files/Annual_Administrative_Report_2017-2018.pdf"
+                                        target="_blank">Annual Admin Report</a></li>
+                                <li><a class="dropdown-item" href="/views/who_is_who" target="_blank">Who is
+                                        Who</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.mppolice.gov.in/sites/default/files/documents/ig-sir-plan-detail.pdf"
+                                        target="_blank">Plans of MP Police</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.mppolice.gov.in/sites/default/files/stc2020/Statistical-Data-2021.pdf"
+                                        target="_blank">Statistical Data</a></li>
+                                <li><a class="dropdown-item" href="/views/history" target="_blank">History of MP
+                                        Police</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Police Stations
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/views/police_station">Aishbag Police
+                                        Station</a></li>
+                                <li><a class="dropdown-item" href="/views/police_station">Ashoka Garden Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">Bairagarh Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">Ghandhi Nagar Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">Govindpura Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">MP Nagar Police
+                                        Station</a></li>
+                                <li><a class="dropdown-item" href="/views/police_station">Ratibarh Police
+                                        Station</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/views/about">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact us</a>
+                        </li>
+                    </ul>
+
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <img src="/static/img/icon/account.svg" class="white-icon" alt="Account" width="40px">
+                    </button>
+
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Right canvas (User Account) -->
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="container">
+            <img src="/static/img/icon/account.svg" class="white-icon" width="100px" alt="">
+        </div>
+        <div class="offcanvas-header text-white">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Account</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-header text-white">
+            <h6 class="offcanvas-title" id="offcanvasRightLabel">ID</h6>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/views/user_deshboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/user_history">Your Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/availability">Your Availability</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/assigned_work">Assigned Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/progress">Work Status</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="container my-7">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2 rounded-pill border-2" type="search" placeholder="Search"
+                aria-label="Search">
+            <button class="btn btn-outline-primary btn-light" type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- images -->
+    <div class="my-3">
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active my-4">
+                    <img src="/static/img/p1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p3.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p4.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p5.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p6.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p7.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p8.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p9.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+                <div class="carousel-item my-4">
+                    <img src="/static/img/p10.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="g-font3 fs-2">Welcome to Police Force Engagement</p>
+                        <a href="./service" class="btn btn-primary active" target="_blank">Our Services</a>
+                        <a href="./helpline" class="btn btn-warning active" target="_blank">Helpline Number</a>
+                        <a href="./feedback" class="btn btn-info active" target="_blank">Feedback</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- cards -->
+    <div class="container text-center my-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 card-style">
+                <img src="/static/img/card1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="./availability" class="a-style">
+                        <h2>Check Availability</h2>
+                    </a>
+                    <p class="card-text g-font2">Check where your duty is now?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 card-style">
+                <img src="/static/img/card2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="./assigned_work" class="a-style">
+                        <h2>Check Assigned Work</h2>
+                    </a>
+                    <p class="card-text g-font2">Check what are the tasks you have been given to do?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 card-style">
+                <img src="/static/img/card3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="./progress" class="a-style">
+                        <h2>Check Progress</h2>
+                    </a>
+                    <p class="card-text g-font2">Check what percentage of your work has been completed?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features for users -->
+    <div class="container px-4 py-5 feature-style my-4" id="feature">
+        <h2 class="pb-2 border-bottom">Our Features</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                </div>
+                <div>
+                    <h3 class="fs-2">Live Update</h3>
+                    <p class="g-font2 justify-text">We keep you live updated with all the current information.</p>
+                    <a href="./availability" class="btn btn-primary">
+                        Show Live Update
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                </div>
+                <div>
+                    <h3 class="fs-2">Map Support</h3>
+                    <p class="g-font2 justify-text">We provide you map support to show all police stations of bhopal.</p>
+                    <a href="./map" class="btn btn-primary">
+                        Open Map
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                </div>
+                <div>
+                    <h3 class="fs-2">Officer Achievements</h3>
+                    <p class="g-font2 justify-text">See what achievements you have got during this social service?</p>
+                    <a href="./user_history" class="btn btn-primary">
+                        Show Achievements
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features for Admin -->
+    <div class="container px-4 py-5 my-4 admin-feature-style">
+        <h2 class="pb-2 border-bottom">Admin Features</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+            <div class="col d-flex flex-column align-items-start gap-2">
+                <h3 class="fw-bold g-font1">Here, what rights have been given to the admin, its information has been
+                    given.</h3>
+                <p class="text-body-secondary g-font2 justify-text">The administrator can do the following operations on
+                    all the employees under him.</p>
+                <a href="./admin" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                    data-bs-target="#adminloginModal">Open Admin Section</a>
+            </div>
+
+            <div class="col">
+                <div class="row row-cols-1 row-cols-sm-2 g-4">
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-4 rounded-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#collection"></use>
+                            </svg>
+                        </div>
+                        <h4 class="fw-semibold mb-0">Adding</h4>
+                        <p class="text-body-secondary g-font2 justify-text">Admin can add the employee coming under him
+                            in the database.</p>
+                    </div>
+
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-4 rounded-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#gear-fill"></use>
+                            </svg>
+                        </div>
+                        <h4 class="fw-semibold mb-0">Updating</h4>
+                        <p class="text-body-secondary g-font2 justify-text">Admin can update the information of any
+                            employee coming under him in the database.</p>
+                    </div>
+
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-4 rounded-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#speedometer"></use>
+                            </svg>
+                        </div>
+                        <h4 class="fw-semibold mb-0">Removing</h4>
+                        <p class="text-body-secondary g-font2 justify-text">Admin can remove any employee coming under
+                            him from the database.</p>
+                    </div>
+
+                    <div class="col d-flex flex-column gap-2">
+                        <div
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-4 rounded-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#table"></use>
+                            </svg>
+                        </div>
+                        <h4 class="fw-semibold mb-0">Searching</h4>
+                        <p class="text-body-secondary g-font2 justify-text">Admin can apply different types of searching
+                            operations on all the employees under him.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal fade" id="adminloginModal" tabindex="-1" aria-labelledby="adminloginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="border: 2px solid #394dff;">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="adminloginModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <img class="mb-4" src="/static/img/logo/logo.png" alt="" width="72" height="57">
+
+                        <div class="form-floating my-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Admin ID</label>
+                        </div>
+                        <div class="form-floating my-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="w-10 btn btn-lg mb-3 forgot-pass" type="button">Forgot Password</button>
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact us -->
+    <div class="container my-4" id="contact">
+        <div class="card border-0">
+            <div class="card-heade contact-style1">
+                Contact
+            </div>
+
+            <div class="row contact-style2">
+                <h1 class="g-font3">CONTACT US</h1>
+                <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                    <div class="card contact-border">
+                        <div class="card-body d-flex">
+                            <img src="/static/img/icon/email.svg" alt="..." width="50px" class="contact-img mx-5">
+                            <h5 class="my-3 contact-style3 g-font1" style="color: darkblue;">EMAIL</h5>
+                        </div>
+                        <div class="d-flex">
+                            <p class="g-font4 mx-5" style="color: darkblue;">supportpfe@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                    <div class="card contact-border">
+                        <div class="card-body d-flex">
+                            <img src="/static/img/icon/telephone.svg" alt="..." width="50px" class="contact-img mx-5">
+                            <h5 class="my-3 contact-style3 g-font1" style="color: darkblue;">CALL</h5>
+                        </div>
+                        <div class="d-flex">
+                            <p class="g-font4 mx-5" style="color: darkblue;">9302765839, 9713385667, 7489096014,
+                                6264937249</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MP leaders slider -->
+    <div class="container my-4" id="candidate">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <div class="card-body">
+                            <img src="/static/img/mp leaders/1_CM_Shivraj.jpg" alt="..." width="200px" height="200px">
+                            <h5 class="card-title">Shivraj Singh Chouhan</h5>
+                            <p class="card-text">Chief Minister of MP</p>
+                            <a href="https://en.wikipedia.org/wiki/Shivraj_Singh_Chouhan" class="btn btn-primary"
+                                target="_blank">Know more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <div class="card-body">
+                            <img src="/static/img/mp leaders/2_Dr.Narottam-Mishra_0.jpg" alt="..." width="200px"
+                                height="200px">
+                            <h5 class="card-title">Dr. Narottam Mishra</h5>
+                            <p class="card-text">Home Minister of MP</p>
+                            <a href="https://en.wikipedia.org/wiki/Narottam_Mishra" class="btn btn-primary"
+                                target="_blank">Know more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <div class="card-body">
+                            <img src="/static/img/mp leaders/3_DG_Saxena.jpg" alt="..." width="200px" height="200px">
+                            <h5 class="card-title">Mr. Shudhir Kumar Saxena</h5>
+                            <p class="card-text">DGP of MP</p>
+                            <a href="https://en.wikipedia.org/wiki/Sudhirkumar_Saxena" class="btn btn-primary"
+                                target="_blank">Know more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <div class="card-body">
+                            <img src="/static/img/mp leaders/4_SecySir8-1.jpeg" alt="..." width="200px" height="200px">
+                            <h5 class="card-title">Mr. Gaurav rajput</h5>
+                            <p class="card-text">Secretary, Home department, MP</p>
+                            <a href="https://mpbreakingnews.in/madhya-pradesh/bhopal/ips-gaurav-rajput-became-the-youngest-ig-of-the-country-mhk/"
+                                class="btn btn-primary" target="_blank">Know more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <div class="card-body">
+                            <img src="/static/img/mp leaders/5_ACS_Rajesh Rajora.jpeg" alt="..." width="200px"
+                                height="200px">
+                            <h5 class="card-title">ACS Rajesh Rajora</h5>
+                            <p class="card-text">Addl. Chief Secretary, Home department, Govt of MP</p>
+                            <a href="https://in.linkedin.com/in/dr-rajesh-rajora-8215341a" class="btn btn-primary"
+                                target="_blank">Know more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card d-flex justify-content-center align-items-center">
+                        <div class="card-body">
+                            <img src="/static/img/mp leaders/6_MP-Governer-1.png" alt="..." width="200px"
+                                height="200px">
+                            <h5 class="card-title">Mangubhai C. Patel</h5>
+                            <p class="card-text">Governor of MP</p>
+                            <a href="https://en.wikipedia.org/wiki/Mangubhai_C._Patel" class="btn btn-primary"
+                                target="_blank">Know more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- FAQ's -->
+    <div class="container my-5">
+        <h1 class="g-font2">Frequently Asked Questions</h1>
+    </div>
+    <div class="container accordion my-5" id="accordionExample">
+        <div class="accordion-item py-3 rounded-4 my-3">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Who will be Admin?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body justify-text">
+                    <strong>The Head Constable</strong> of your police station will be admin for you.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item py-3 rounded-4 my-3">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Who will update officer data and work status?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body justify-text">
+                    Only your admin can update your all type of data like work status, achievements, transfer, assigned
+                    work etc.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item py-3 rounded-4 my-3">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Will our data be secure?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body justify-text">
+                    Yes, except you only your admin can see your data. Your data is not accessible for any other third
+                    person or officer, so it is secure.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item py-3 rounded-4 my-3">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What will be the power of an officer?
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body justify-text">
+                    There is no special power provided to an officer, only he/she will be live updated will it's all
+                    information and work.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item py-3 rounded-4 my-3">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    What will be the community support?
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body justify-text">
+                    Whatever feedback or query you have, you can send it to us by going to the feedback section and our
+                    team will try to reply to your feedback as soon as possible.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item py-3 rounded-4 my-3">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    After the transfer of the officer, his admin will remain same or different
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body justify-text">
+                    Whoever will be the head constable of your current police station, only he will be your admin, so
+                    your admin will be changed.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- our team member -->
+    <div class="container text-center my-6" id="community">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center justify-content-end p-3 pe-3 text-primary-emphasis bg-light-subtle g-font1 fs-4">
+                    Our Community
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/hariom.jpg" alt="H" width="48"
+                        height="48">Hariom
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-secondary-emphasis bg-secondary-subtle border border-secondary-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/atul.jpg" alt="A" width="48"
+                        height="48">Atul
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/himashu.jpg" alt="H" width="48"
+                        height="48">Himanshu
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/revi.jpg" alt="R" width="48"
+                        height="48">Ravi
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/aachal.jpg" alt="A" width="48"
+                        height="48">Aachal
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="bg-new">
+        <div class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                <div class="col mb-3">
+                    <a href="#" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                        <img src="/static/img/logo/logo.png" class="logo" alt="logo" width="100px">
+                    </a>
+                </div>
+
+                <div class="col mb-3">
+
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Navbar</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary fs-5">Home</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/service"
+                                class="nav-link p-0 text-body-secondary fs-5">Service</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/structure"
+                                class="nav-link p-0 text-body-secondary fs-5">Structure</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/about"
+                                class="nav-link p-0 text-body-secondary fs-5">About us</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#contact"
+                                class="nav-link p-0 text-body-secondary fs-5">Contact
+                                us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>User</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#candidate"
+                                class="nav-link p-0 text-body-secondary fs-5">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#feature"
+                                class="nav-link p-0 text-body-secondary fs-5">Features</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/feedback"
+                                class="nav-link p-0 text-body-secondary fs-5">Feedback</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/helpline"
+                                class="nav-link p-0 text-body-secondary fs-5">Helpline</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/views/admin"
+                                class="nav-link p-0 text-body-secondary fs-5" data-bs-toggle="modal"
+                                data-bs-target="#adminloginModal">Admin Section</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#community" class="nav-link p-0 text-body-secondary fs-5">Our
+                                community</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#candidate" class="nav-link p-0 text-body-secondary fs-5">Our
+                                candidates</a></li>
+                        <li class="nav-item mb-2"><a href="/views/history"
+                                class="nav-link p-0 text-body-secondary fs-5">History</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-body-secondary g-font1 fw-bold fs-4">
+                        <p class="text-white">© 2023 pFe, Inc</p>
+                        <p class="text-white">Email: supportpfe@gmail.com<br>Contact: 9302765839</p>
+                    </span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-body-secondary white-icon "
+                            href="https://www.linkedin.com/in/hariom-singh-rajput/"><img
+                                src="/static/img/icon/linkedin.svg" alt="" width="25px"></a></li>
+                    <li class="ms-3"><a class="text-body-secondary white-icon "
+                            href="https://www.facebook.com/profile.php?id=100053355981532"><img
+                                src="/static/img/icon/facebook.svg" alt="" width="25px"></a></li>
+                    <li class="ms-3"><a class="text-body-secondary white-icon " href="https://www.instagram.com/"><img
+                                src="/static/img/icon/instagram.svg" alt="" width="25px"></a></li>
+                    <li class="ms-3"><a class="text-body-secondary white-icon " href="https://www.whatsapp.com/"><img
+                                src="/static/img/icon/whatsapp.svg" alt="" width="25px"></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+
+    <!-- java script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.structure-font-style {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    color: rgb(78, 78, 78);
+    text-align: justify;
+}
+
+.img-structure {
+    border: 1px solid black;
+    border-radius: 20px;
+
+    transition: all 1s ease 0s;
+}
+
+.img-structure:hover {
+    border: 2px solid black;
+    box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.7);
+}

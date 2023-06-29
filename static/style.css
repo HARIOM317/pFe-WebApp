@@ -1,0 +1,231 @@
+/* 
+For dark mode
+
+body {
+    background-color: #12151b;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+    color: white;
+} 
+*/
+
+.bg-new {
+    background: linear-gradient(#6416ff, #5623a3);
+    /* background-color: #702cf6; */
+    color: white;
+}
+
+.navbar-brand:focus,
+.navbar-brand {
+    color: rgb(200, 200, 200);
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: white;
+}
+
+.nav-link:focus,
+.nav-link {
+    color: #bebebe;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #ffffff;
+}
+
+/* .nav-link:active{
+    text-decoration: underline;
+} */
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    background: #5d1dcf;
+}
+
+.dropdown-item:focus,
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: white;
+    background-color: #0082fb;
+}
+
+.search-btn {
+    color: white;
+    background-color: #54289e;
+    border-color: white;
+
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #09beff;
+    --bs-btn-active-border-color: white;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.search-btn:hover {
+    color: #ffffff;
+    background-color: #1896ff;
+    border-color: white;
+}
+
+.my-6 {
+    margin-top: 6.7rem !important;
+}
+
+.my-7 {
+    margin-top: 10rem !important;
+}
+
+.my-8 {
+    margin-top: 12rem !important;
+}
+
+.a-style {
+    text-decoration: none;
+}
+
+.card-style {
+    padding: 20px 0px;
+    background-color: #ffdcdc;
+
+    transition-property: width height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    border: 0.5px solid black;
+}
+
+.card-style:hover {
+    background-color: #ffd0d0;
+    border: 1px solid black;
+    box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.feature-style {
+    background: linear-gradient(#5676fd, #257cfd);
+    /* background-color: #5676fd; */
+    color: white;
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.feature-style:hover {
+    background: linear-gradient(#455eff, #3243ff);
+    /* background-color: #445cff; */
+    border: 2px solid black;
+    box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.admin-feature-style {
+    background: linear-gradient(#00b3ff, #3097f8);
+    /* background-color: #4a87ff; */
+    color: white;
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.admin-feature-style:hover {
+    background: linear-gradient(#4888ff, #6975ff);
+    /* background-color: #6776ff; */
+    border: 2px solid black;
+    box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.contact-style1 {
+    font-size: large;
+}
+
+.contact-style2 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.contact-style3 {
+    font-size: 28px;
+}
+
+.contact-border {
+    border: none;
+}
+
+.contact-img {
+    filter: invert(36%) sepia(22%) saturate(6738%) hue-rotate(206deg) brightness(101%) contrast(98%);
+}
+
+.white-icon {
+    filter: invert(1);
+}
+
+.g-font1 {
+    font-family: 'Genos', sans-serif;
+}
+
+.g-font2 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+.g-font3 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.g-font4 {
+    font-family: 'Noto Serif', serif;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.text-body-secondary {
+    --bs-text-opacity: 1;
+    color: white;
+}
+
+.about-style {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    color: gray;
+    text-align: justify;
+}
+
+.forgot-pass {
+    font-size: 16px;
+    color: rgb(63, 63, 63);
+}
+
+.forgot-pass:hover {
+    color: rgb(0, 0, 0);
+}
+
+.forgot-pass:focus {
+    border: none;
+    color: darkblue;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.logo {
+    filter: invert(88%) sepia(21%) saturate(2723%) hue-rotate(337deg) brightness(104%) contrast(103%);
+}
+
+.logo2 {
+    filter: invert(56%) sepia(74%) saturate(415%) hue-rotate(4deg) brightness(97%) contrast(86%);
+}
+
+.admin-icon{
+    background-color: white;
+    transition: all 0.5s ease 0s;
+}

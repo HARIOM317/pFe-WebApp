@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map - Current Station</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/history_style.css">
+    <link rel="stylesheet" href="/static/map_style.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos&family=Noto+Serif:wght@700&family=Philosopher&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="fixed-top bg-new">
+        <!-- top bar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <img src="/static/img/top-img/bhopal-police.png" alt="" height="60px"">
+                                    <h1 class=" fs-1 g-font1" style="font-weight: bold; color: #efd1a7;">MP Police</h1>
+                <img src="/static/img/top-img/G-20.png" alt="" height="60px">
+            </div>
+        </nav>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="/views/user_deshboard">
+                    <img src="/static/img/logo/logo.png" alt="pFe" width="50px" class="logo me-3">
+                </a>
+                <!-- <a class="navbar-brand" href="index">pFe</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/views/user_deshboard">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/views/service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/views/structure">Structure</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Info Zone
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="https://www.mppolice.gov.in/sites/default/files/Annual_Administrative_Report_2017-2018.pdf"
+                                        target="_blank">Annual Admin Report</a></li>
+                                <li><a class="dropdown-item" href="/views/who_is_who" target="_blank">Who is
+                                        Who</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.mppolice.gov.in/sites/default/files/documents/ig-sir-plan-detail.pdf"
+                                        target="_blank">Plans of MP Police</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.mppolice.gov.in/sites/default/files/stc2020/Statistical-Data-2021.pdf"
+                                        target="_blank">Statistical Data</a></li>
+                                <li><a class="dropdown-item" href="/views/history" target="_blank">History of MP
+                                        Police</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Police Stations
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/views/police_station">Aishbag Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">Ashoka Garden Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">Bairagarh Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">Ghandhi Nagar Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">Govindpura Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">MP Nagar Police
+                                        Station</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/views/police_station">Ratibarh Police
+                                        Station</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/views/about">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Account Button -->
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight">
+                        <img src="/static/img/icon/account.svg" class="white-icon" alt="Account" width="40px">
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Right canvas (User Account) -->
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="container">
+            <img src="/static/img/icon/account.svg" class="white-icon" width="100px" alt="">
+        </div>
+        <div class="offcanvas-header text-white">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Account</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-header text-white">
+            <h6 class="offcanvas-title" id="offcanvasRightLabel">ID</h6>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/views/user_deshboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/user_history">Your Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/availability">Your Availability</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/assigned_work">Assigned Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/progress">Work Status</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal fade" id="adminloginModal" tabindex="-1" aria-labelledby="adminloginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="border: 2px solid #394dff;">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="adminloginModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <img class="mb-4" src="/static/img/logo/logo.png" alt="" width="72" height="57">
+
+                        <div class="form-floating my-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Admin ID</label>
+                        </div>
+                        <div class="form-floating my-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="w-10 btn btn-lg mb-3 forgot-pass" type="button">Forgot Password</button>
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map -->
+
+    <div class="container my-8">
+        <iframe class="round-map" width="100%" height="500"
+            src="https://www.google.com.qa/maps/d/u/1/embed?mid=14x0qbABJDDOQxDHzePfAJEbHnQVsoxE&ehbc=2E312F"
+            width="640" height="480">
+        </iframe>
+    </div>
+
+
+    <!-- our team member -->
+    <div class="container text-center my-6" id="community">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center justify-content-end p-3 pe-3 text-primary-emphasis bg-light-subtle g-font1 fs-4">
+                    Our Community
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/hariom.jpg" alt="H" width="48"
+                        height="48">Hariom
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-secondary-emphasis bg-secondary-subtle border border-secondary-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/atul.jpg" alt="A" width="48"
+                        height="48">Atul
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/himashu.jpg" alt="H" width="48"
+                        height="48">Himanshu
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/revi.jpg" alt="R" width="48"
+                        height="48">Ravi
+                </span>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-1">
+                <span
+                    class="badge d-flex align-items-center p-1 pe-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-pill">
+                    <img class="rounded-circle me-1" src="/static/img/Our-team-member/aachal.jpg" alt="A" width="48"
+                        height="48">Aachal
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="bg-new">
+        <div class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                <div class="col mb-3">
+                    <a href="/views/user_deshboard"
+                        class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                        <img src="/static/img/logo/logo.png" class="logo" alt="logo" width="100px">
+                    </a>
+                </div>
+
+                <div class="col mb-3">
+
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Navbar</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/views/index"
+                                class="nav-link p-0 text-body-secondary fs-5">Home</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/service"
+                                class="nav-link p-0 text-body-secondary fs-5">Service</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/structure"
+                                class="nav-link p-0 text-body-secondary fs-5">Structure</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/about"
+                                class="nav-link p-0 text-body-secondary fs-5">About us</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#contact"
+                                class="nav-link p-0 text-body-secondary fs-5">Contact
+                                us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>User</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/views/feedback"
+                                class="nav-link p-0 text-body-secondary fs-5">Feedback</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/helpline"
+                                class="nav-link p-0 text-body-secondary fs-5">Helpline</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/views/admin"
+                                class="nav-link p-0 text-body-secondary fs-5" data-bs-toggle="modal"
+                                data-bs-target="#adminloginModal">Admin
+                                Section</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#community" class="nav-link p-0 text-body-secondary fs-5">Our
+                                community</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="/views/who_is_who"
+                                class="nav-link p-0 text-body-secondary fs-5">Our
+                                candidates</a></li>
+                        <li class="nav-item mb-2"><a href="/views/user_history"
+                                class="nav-link p-0 text-body-secondary fs-5">History</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-body-secondary g-font1 fw-bold fs-4" id="contact">
+                        <p class="text-white">© 2023 pFe, Inc</p>
+                        <p class="text-white">Email: supportpfe@gmail.com<br>Contact: 9302765839</p>
+                    </span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-body-secondary white-icon "
+                            href="https://www.linkedin.com/in/hariom-singh-rajput/"><img
+                                src="/static/img/icon/linkedin.svg" alt="" width="25px"></a></li>
+                    <li class="ms-3"><a class="text-body-secondary white-icon "
+                            href="https://www.facebook.com/profile.php?id=100053355981532"><img
+                                src="/static/img/icon/facebook.svg" alt="" width="25px"></a></li>
+                    <li class="ms-3"><a class="text-body-secondary white-icon " href="https://www.instagram.com/"><img
+                                src="/static/img/icon/instagram.svg" alt="" width="25px"></a></li>
+                    <li class="ms-3"><a class="text-body-secondary white-icon " href="https://www.whatsapp.com/"><img
+                                src="/static/img/icon/whatsapp.svg" alt="" width="25px"></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+h1{
+    font-family: 'Philosopher', sans-serif;
+    color: darkblue;
+}
+
+h2{
+    font-family: 'Genos', sans-serif;
+    color: rgb(0, 145, 255);
+}
+
+p{
+    font-size: large;
+    color: rgb(40, 40, 40);
+    text-align: justify;
+}
+
+.img-style{
+    border: 2px solid black;
+    transition: all 0.5s ease 0s;
+}
+
+.img-style:hover{
+    box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.download-style{
+    text-decoration: none;
+    font-size: large;
+}
